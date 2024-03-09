@@ -53,16 +53,16 @@ pipeline {
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    git config user.email "sagichdirnicht259@outlook.de"
-                    git config user.name "Tim279"
-                    BUILD_NUMBER=${BUILD_NUMBER}
-                    // sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
-                    sed -i "19c \\        image: tim259/spring-boot-app:${BUILD_NUMBER}" spring-boot-app-manifests/deployment.yml
-                    // sed -i -e "s/spring-boot-app:*/spring-boot-app:${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
-                    git add spring-boot-app-manifests/deployment.yml
-                    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
-                    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
-                '''
+    git config user.email "sagichdirnicht259@outlook.de"
+    git config user.name "Tim279"
+    BUILD_NUMBER=${BUILD_NUMBER}
+    # sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
+    sed -i "19c \\        image: tim259/spring-boot-app:${BUILD_NUMBER}" spring-boot-app-manifests/deployment.yml
+    # sed -i -e "s/spring-boot-app:*/spring-boot-app:${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
+    git add spring-boot-app-manifests/deployment.yml
+    git commit -m "Update deployment image to version ${BUILD_NUMBER}"
+    git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:master
+'''
             }
         }
     }
