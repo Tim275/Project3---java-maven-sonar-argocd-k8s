@@ -9,7 +9,7 @@ pipeline {
     stage('Checkout') {
       steps {
         sh 'echo passed'
-        git branch: 'master', url: 'https://github.com/iamsaikishore/Project3---java-maven-sonar-argocd-k8s.git'
+        git branch: 'main', url: 'https://github.com/iamsaikishore/Project3---java-maven-sonar-argocd-k8s.git'
       }
     }
     stage('Build and Test') {
@@ -21,7 +21,7 @@ pipeline {
     }
     stage('Static Code Analysis') {
       environment {
-        SONAR_URL = "http://13.232.6.130:9000/"
+        SONAR_URL = "http://3.77.154.239:9000/"
       }
       steps {
         withCredentials([string(credentialsId: 'sonarqube', variable: 'SONAR_AUTH_TOKEN')]) {
@@ -48,16 +48,16 @@ pipeline {
     stage('Update Deployment File') {
         environment {
             GIT_REPO_NAME = "Project3---java-maven-sonar-argocd-k8s"
-            GIT_USER_NAME = "iamsaikishore"
+            GIT_USER_NAME = "Tim279"
         }
         steps {
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
-                    git config user.email "saikishorepro28@gmail.com"
-                    git config user.name "iamsaikishore"
+                    git config user.email "sagichdirnicht259@outlook.de"
+                    git config user.name "tim259"
                     BUILD_NUMBER=${BUILD_NUMBER}
                     // sed -i "s/replaceImageTag/${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
-                    sed -i "19c \        image: iamsaikishore/spring-boot-app:${BUILD_NUMBER}" spring-boot-app-manifests/deployment.yml
+                    sed -i "19c \        image: tim259/spring-boot-app:${BUILD_NUMBER}" spring-boot-app-manifests/deployment.yml
                     // sed -i -e "s/spring-boot-app:*/spring-boot-app:${BUILD_NUMBER}/g" spring-boot-app-manifests/deployment.yml
                     git add spring-boot-app-manifests/deployment.yml
                     git commit -m "Update deployment image to version ${BUILD_NUMBER}"
