@@ -4,7 +4,7 @@ metadata:
   name: ingress-spring-boot-app
 spec:
   rules:
-  - host: "domain.com"
+  - host: "ad780adc399294f37b4f21acb8530163-289888666.eu-central-1.elb.amazonaws.com"
     http:
       paths:
       - pathType: Prefix
@@ -14,7 +14,7 @@ spec:
             name: spring-boot-app-service
             port:
               number: 80
-  - host: "*.domain.com"
+  - host: "*.ad780adc399294f37b4f21acb8530163-289888666.eu-central-1.elb.amazonaws.com"
     http:
       paths:
       - pathType: Prefix
@@ -24,11 +24,6 @@ spec:
             name: spring-boot-app-service
             port:
               number: 80
-
-
-
-
-
 
 
 
