@@ -19,7 +19,7 @@ Summary:
 
 ![image](https://github.com/Tim275/Project3---java-maven-sonar-argocd-k8s/assets/117520669/b0053bb9-8f7c-445e-9fed-6d48159f7206)
 
-![image](https://github.com/Tim275/Project3---java-maven-sonar-argocd-k8s/assets/117520669/cb0592a9-6a05-4e02-b824-04b7007f6818)
+
 
 **GitOps Results** 
 
