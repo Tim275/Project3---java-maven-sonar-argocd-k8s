@@ -15,3 +15,27 @@ Components used:
 
 Summary:
 
+**Pipeline Results** 
+
+![image](https://github.com/Tim275/Project3---java-maven-sonar-argocd-k8s/assets/117520669/b0053bb9-8f7c-445e-9fed-6d48159f7206)
+
+![image](https://github.com/Tim275/Project3---java-maven-sonar-argocd-k8s/assets/117520669/cb0592a9-6a05-4e02-b824-04b7007f6818)
+
+**GitOps Results** 
+
+![image](https://github.com/Tim275/Project3---java-maven-sonar-argocd-k8s/assets/117520669/bb1378d1-3647-46bc-9097-7934687de7ed)
+
+**CI/CD Results**
+
+
+![image](https://github.com/Tim275/Project3---java-maven-sonar-argocd-k8s/assets/117520669/3479b9c3-faed-4485-89cc-0ea5a90082bb)
+
+
+***after Webhook***
+
+![image](https://github.com/Tim275/Project3---java-maven-sonar-argocd-k8s/assets/117520669/697d8b7f-2a8d-4947-8526-1efb542c2d57)
+
+
+
+
+
