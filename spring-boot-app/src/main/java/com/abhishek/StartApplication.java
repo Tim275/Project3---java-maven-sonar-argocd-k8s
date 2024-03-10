@@ -13,7 +13,7 @@ public class StartApplication {
     @GetMapping("/")
     public String index(final Model model) {
         model.addAttribute("title", "After The Github Webhook through the Pipeline, version 2");
-        model.addAttribute("msg", "greetz Timour Miagol");
+        model.addAttribute("msg", "greetz Timour ");
         return "index";
     }
 
