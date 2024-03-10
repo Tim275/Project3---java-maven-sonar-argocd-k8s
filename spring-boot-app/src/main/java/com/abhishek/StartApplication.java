@@ -12,8 +12,8 @@ public class StartApplication {
 
     @GetMapping("/")
     public String index(final Model model) {
-        model.addAttribute("title", "After The Github Webhook through the Pipeline, version 2");
-        model.addAttribute("msg", "greetz Timour ");
+        model.addAttribute("title", "Update after going Through CI/CD Pipeline using Argo CD");
+        model.addAttribute("msg", "Greetz Timour");
         return "index";
     }
 
